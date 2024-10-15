@@ -15,22 +15,28 @@ getFactButton.addEventListener('click', async () => {
 });
 
 createFactButton.addEventListener('click', () => {
-    const fact = {
-        title: 'My New Fact',
-        content: 'This is a new fact about dogs!'
-    };
+    // const fact = {
+    //     title: 'My New Fact',
+    //     content: 'This is a new fact about dogs!'
+    // };
+
+    // // Simulate creating a new fact
+    // factElement.innerText = `${fact.title} - ${fact.content}`;
 
     fetch('https://dummyjson.com/posts', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
-        },
-        // body: JSON.stringify(fact)
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        const newFact = data.posts[0].title;
+        factElement.innerText = `New Fact: ${newFact}`;
+        })
+        .catch(error => console.error(error));
+    });
 
 // createFactButton.addEventListener('click', async () => {
 //     try {
