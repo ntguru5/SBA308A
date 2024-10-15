@@ -3,10 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SBA308A</title>
-        <script defer src="./app.js"></script>
+        <title>Random Dog Image Gallery</title>
+        <script type="module" src="app.js"></script>
     </head>
     <body>
+        <header>
+            <h1>Dog Image Gallery</h1>
+        </header>
 
+        <main>
+            <section>
+                <button id="randomBtn">Get Random Dog Image</button>
+                <select id="breedDropdown">
+                    <option value="">-- Select Breed --</option>
+                </select>
+            </section>
+
+            <section id="imageContainer"></section>
+            <div id="pagination"></div>
+        </main>
+
+
+    </body>
     </body>
 </html>
