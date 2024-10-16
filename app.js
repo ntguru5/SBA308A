@@ -15,14 +15,6 @@ getFactButton.addEventListener('click', async () => {
 });
 
 createFactButton.addEventListener('click', () => {
-    // const fact = {
-    //     title: 'My New Fact',
-    //     content: 'This is a new fact about dogs!'
-    // };
-
-    // // Simulate creating a new fact
-    // factElement.innerText = `${fact.title} - ${fact.content}`;
-
     fetch('https://dummyjson.com/posts', {
         method: 'GET',
         headers: {
@@ -37,17 +29,3 @@ createFactButton.addEventListener('click', () => {
         })
         .catch(error => console.error(error));
     });
-
-// createFactButton.addEventListener('click', async () => {
-//     try {
-//         const fact = {
-//             attributes: {
-//                 body: 'This is a new fact!'
-//             }
-//         };
-//         const response = await createDogFact(fact);
-//         console.log(response);
-//     } catch (error) {
-//         console.error(error);
-//     }
-// });
